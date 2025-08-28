@@ -1,20 +1,12 @@
--- Step 1: Show all databases
-SHOW DATABASES;
 
--- Step 2: Choose your database (replace 'school' with your DB name if different)
+SHOW DATABASES;
 CREATE DATABASE IF NOT EXISTS school;
 USE school;
-
--- Step 3: Drop table if it already exists
 DROP TABLE IF EXISTS student_marks;
-
--- Step 4: Create table
 CREATE TABLE student_marks (
     student_id INT PRIMARY KEY,
     marks INT
 );
-
--- Step 5: Insert sample marks
 INSERT INTO student_marks VALUES
 (1, 20),
 (2, 30),
@@ -22,8 +14,6 @@ INSERT INTO student_marks VALUES
 (4, 55),
 (5, 65),
 (6, 85);
-
--- Step 6: Select marks with grade
 SELECT student_id, marks,
 CASE
     WHEN marks < 25 THEN 'F'
