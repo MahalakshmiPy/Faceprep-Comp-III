@@ -1,0 +1,27 @@
+package nov21;
+
+public class Poly {
+    public static void main(String[] args){
+        Son s = new Son();
+        s.RE();
+    }
+}
+
+class GrandFather {
+    void RE() {
+        System.out.println("GrandFather RE 1985");
+    }
+}
+
+class Father extends GrandFather {
+    void RE() {
+        System.out.println("Father's RE 2002");
+    }
+}
+
+class Son extends Father {
+    void RE() {
+        super.RE();
+        System.out.println("Son's RE 2022");
+    }
+}
